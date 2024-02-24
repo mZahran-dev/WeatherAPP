@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAPI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg bg-dark p-4 text-white" data-bs-theme="dark">
+            <div class="container mt-3">
+                <div class="header">
+                    <img src="images/images1.png" alt="Logo" width="64" height="38"
+                        class="d-inline-block align-text-top me-2">
+                    <h1 class="navbar-brand" href="#">WeatherAPP</h1>
+                  
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto ">
+                        <li class="nav-item active px-4 py-0">
+                            <a class="nav-link " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-4 py-0 ms-3">
+                            <a class="nav-link  " aria-current="page" href="#">News</a>
+                        </li>
+                        <li class="nav-item px-4 py-0 ms-3">
+                            <a class="nav-link " aria-current="page" href="#">Live Cameras</a>
+                        </li>
+                        <li class="nav-item px-4 py-0 ms-3">
+                            <a class="nav-link" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item px-4 py-0 ms-3">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <main class="pb-1">
+            <div class="search">
+                 <div class="container py-2 ">
+                    <div class="row mt-5 pb-4 position-relative">
+                        <input type="text" id="search" class="col-lg-12 p-3 rounded-5 bg-dark"
+                            placeholder="Find your loction ...">
+                    </div>
+                </div>
+            </div>
+            
+            <section class="weather ">
+                <div class="container mt-2">
+                    <div class="row  text-white">
+                        <div class="col-lg-4 today-weather p-0 rounded-4">
+                            <div class="date ">
+                                <div class="d-flex justify-content-between p-2">
+                                    <span id="today-Name" class="day-name">Thursday</span>
+                                    <span>
+                                        <span id="todayDateDayNumber">30</span>
+                                        <span id="todayDateDayMonth">May</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="info p-4">
+                                <span id="todayLocation" class="fs-6">Cairo</span>
+                                <div class="temp d-flex justify-content-between">
+                                    <h1 class="text-white fs-1 fw-bolder  mt-4 mb-4 temp-c">
+                                        <span id="todayTemp">16</span>
+                                        <span><sup>o</sup>C</span>
+                                    </h1>
+                                    <img id="todayConditionImg" class="icon" src="images/images3.png" alt="not-loaded" width="100" height="100"
+                                        class="d-inline-block align-text-top me-2">
+                                </div>
+                                <h6 id="todayConditionText" class="status" class="text-primary ">sunny</h5>
+                                    <div class="icons mt-5 d-flex flex-row py-1">
+                                        <div class="icon1 ">
+                                            <img src="images/images4.png" alt="Logo" width="30" height="30"
+                                                class="d-inline-block align-text-center ">
+                                            <span id="humidity">20%</span>
+                                        </div>
+                                        <div class="icon1">
+                                            <img src="images/images5.png" alt="Logo" width="30" height="30"
+                                                class="d-inline-block align-text-center ">
+                                            <span id="wind">1Km/h</span>
+                                        </div>
+                                        <div class="icon1 ">
+                                            <img src="images/images6.png" alt="Logo" width="30" height="30"
+                                                class="d-inline-block align-text-center ">
+                                            <span id="windDirection">East</span>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 next-day-weather p-0 ">
+                            <div class=" date2  text-center p-2">
+                                <span class="nextDayName">Friday</span>
+                            </div>
+                            <div class="info2 d-flex flex-column justify-content-center align-items-center  p-5">
+                                <img src="images/images7.png" width="70" alt="not-loaded" class="nextConditionImg mb-3">
+                                <h2>
+                                    <span class="nextMaxTemp text-white"></span>
+                                    <span><sup>o</sup>C</span>
+                                </h2>
+                                <h5 class="text-secondary">
+                                    <span class="nextMinTemp"></span>
+                                    <span><sup>o</sup>C</span>
+                                </h5>
+                                <p class="text-primary py-3 nextConditionText">Sunny</p>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="col-lg-4 today-weather p-0 rounded-4 ">
+                            <div class=" date  text-center p-2">
+                                <span class="nextDayName">Friday</span>
+                            </div>
+                            <div class="info2 d-flex flex-column justify-content-center align-items-center  p-5">
+                                <img src="images/images7.png" width="70" alt="not-loaded" class="nextConditionImg mb-3">
+                                <h2>
+                                    <span class="nextMaxTemp text-white "></span>
+                                    <span><sup>o</sup>C</span>
+                                </h2>
+                                <h5 class="text-secondary">
+                                    <span class="nextMinTemp">15</span>
+                                    <span><sup>o</sup>C</span>
+                                </h5>
+                                <p class="text-primary py-3 nextConditionText">Sunny</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container  py-3  py-5">
+                <div class="row ">
+                    <div class="try d-flex flex-row justify-content-between align-items-center">
+                        <div class="col-lg-8 position-relative">
+                            <input type="text" id="search" class="col-lg-12 p-3 rounded-5 bg-dark "
+                                placeholder="Enter your email to subscribe">
+                            <div class="subscribe position-absolute">
+                                <span class="text-white bg-primary sub rounded-5 fs-6 ">Subscribe</span>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-2">
+                            <div class="icons">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-twitter ms-1"></i>
+                                <i class="fa-brands fa-instagram ms-1"></i>
+                                <i class="fa-brands fa-pinterest ms-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <p class="text-white pt-4 pb-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+.nav-link{
+    color: white ;
+    font-size: 14px;
+}
+.nav-link:hover,.active{
+    color: #0D6EFD !important;
+}
+.nav-item{
+    border: 3px solid transparent;
+    border-radius: 25px;
+}
+.nav-item:hover,.active{
+    border: 3px solid #0D6EFD;
+    border-radius: 25px;
+}
+.active{
+    border: 3px solid #0D6EFD;
+    border-radius: 25px;
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 18px;
+}
+.navbar-brand:hover{
+    color: white;
+}
+
+.find{
+   width: fit-content;
+   top: 16%;
+   right: -0.5%;
+   
+}
+.find2{
+    background-color: #009ad8 !important;
+    padding: 14px 40px;
+    cursor: pointer;
+}
+.temp h1{
+    font-size: 50px;
+}
+.date{
+    background-color:#2d303d ;
+}
+.today-weather{
+    background-color:#323544c7;
+    
+}
+.next-day-weather{
+    background-color: #262936e0;
+}
+.date2{
+    background-color: #222530a6;
+}
+.nextConditionText{
+    color: #009ad8 !important;
+}
+.subscribe{
+    cursor: pointer;
+    width: fit-content;
+    top: 30%;
+    right: 1%;
+}
+.icons i{
+    background-color:rgba(0, 0, 0, 0.322) ;
+    color:  #009ad8;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 19px;
+    transition: all 0.3s ease-in-out;
+}
+.icon1{ 
+    margin-right: 30px !important;
+}
+.icons i:hover{
+   background-color: #009ad8;
+   color: white;
+   cursor: pointer;
+}
+footer{
+    background-color:#323544;
+}
+input{
+    outline: none;
+    border: none;
+    color: white;
+}
+main{
+    background-image: url(../images/images2.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #1e202b;
+}
+.sub{
+    background-color: #009ad8 !important;
+    padding: 14px 23px;
+}
+.status{ 
+    color: #009ad8;
+}
